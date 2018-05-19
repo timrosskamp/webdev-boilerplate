@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently --kill-others \"rollup -c -w\" \"gulp watch\"",
-    "build": "rollup -c && gulp build",
+    "build": "rollup -c && gulp build"
   },
   "author": "Tim Rosskamp",
   "license": "UNLICENSED",
