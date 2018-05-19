@@ -1,0 +1,10 @@
+/**
+ * This is the breakpoint configuration.
+ * Breakpoints can be 'min' or 'max'.
+ * Use 'px' values here, they will be converted to em in the mixin.
+ */
+$breakpoints: (
+    "small": 360px,
+    "medium": 500px,
+    "large": 800px
+);

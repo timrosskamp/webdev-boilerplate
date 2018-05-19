@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600,600i|Roboto:400,400i,700,700i');
 @import 'modularscale-sass/stylesheets/modularscale';
 
-$root-fontsize: 1rem;
 
 $modularscale: (
-    base: $root-fontsize,
+    base: 0.875rem, // This must be in 'em' or 'rem'
     ratio: 1.1,
     30em: (
         ratio: 1.1
