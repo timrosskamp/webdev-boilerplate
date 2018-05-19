@@ -9,6 +9,7 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
+const cssnano = require('cssnano');
 
 gulp.task('build', done => {
 	pump([
@@ -30,6 +31,11 @@ gulp.task('build', done => {
 		postcss([
             mqpacker({
                 sort: true
+			}),
+			cssnano({
+				discardComments: {
+					removeAll: true
+				}
 			})
         ]),
 		gulp.dest('assets/css')
