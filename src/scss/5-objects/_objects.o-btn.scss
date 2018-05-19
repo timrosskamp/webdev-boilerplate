@@ -1,0 +1,10 @@
+.o-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.2em 1em;
+    border: 2px solid currentColor;
+    &:hover {
+        background: currentColor;
+        color: color('white');
+    }
+}
