@@ -20,8 +20,7 @@ export default {
         }),
         resolve({
             extensions: [
-                '.js',
-                '.json'
+                '.js'
             ]
         }),
         babel()
