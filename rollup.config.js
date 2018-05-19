@@ -8,9 +8,9 @@ export default {
         file: 'assets/js/app.bundle.js',
         format: 'iife'
     },
-    plugins: {
+    plugins: [
         commonjs({
-            include: 'node_modules/**',
+            include: 'node_modules/**'
         }),
         includePaths({
             paths: [
@@ -23,5 +23,5 @@ export default {
                 '.json'
             ]
         })
-    }
+    ]
 }
