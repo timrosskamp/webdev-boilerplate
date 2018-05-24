@@ -7,7 +7,7 @@
     @if( $mode == 'min' ){
         @if( map-has-key($breakpoints, $point) ){
             $value: map-get($breakpoints, $point);
-            @media (min-width: #{(strip-unit($value) * (strip-unit(ms(0)) / 16) * 1em)}){
+            @media (min-width: #{$value * ($fontsize / 16) * 1em)}){
                 @content;
             }
         }
@@ -18,7 +18,7 @@
     @else if( $mode: 'max' ){
         @if( map-has-key($breakpoints, $point) ){
             $value: map-get($breakpoints, $point);
-            @media (max-width: #{((strip-unit($value) - 1) * (strip-unit(ms(0)) / 16) * 1em)}){
+            @media (max-width: #{(($value - 1) * ($fontsize / 16) * 1em)}){
                 @content;
             }
         }
