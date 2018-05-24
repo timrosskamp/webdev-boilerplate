@@ -43,5 +43,5 @@ gulp.task('build', done => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch(['src/scss/**'], {cwd: __dirname + '/src/scss'}, ['sass']);
+	gulp.watch(['src/scss/**'], {cwd: __dirname}, ['build']);
 });
