@@ -1,7 +1,7 @@
 .icon {
     display: block;
-    width: 1em;
-    height: 1em;
+    width: #{($fontsize * 1em / 16)};
+    height: #{($fontsize * 1em / 16)};
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;

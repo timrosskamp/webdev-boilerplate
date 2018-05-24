@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600,600i|Roboto:400,400i,700,700i');
 @import 'modularscale-sass/stylesheets/modularscale';
 
+$fontsize: 16; // Define a px value here, but don't add a unit
 
 $modularscale: (
-    base: 0.875rem, // This must be in 'em' or 'rem'
+    base: $fontsize * 1em / 16,
     ratio: 1.1,
     30em: (
         ratio: 1.1
