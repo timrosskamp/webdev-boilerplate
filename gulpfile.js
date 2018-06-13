@@ -20,7 +20,7 @@ gulp.task('build', done => {
 			'src/scss/4-elements/*.scss',
 			'src/scss/5-objects/*.scss',
 			'src/scss/6-components/*.scss',
-			'src/scss/7-utilities/*.scss'
+			'src/scss/7-utils/*.scss'
 		]),
 		concat('style.css'),
 		sass({
