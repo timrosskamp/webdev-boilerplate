@@ -42,6 +42,6 @@ gulp.task('build', done => {
 	], done);
 });
 
-gulp.task('watch', () => {
-	gulp.watch(['src/scss/**'], {cwd: __dirname}, ['build']);
+gulp.task('watch', ['build'], () => {
+	gulp.watch(['src/scss/**'], ['build']);
 });
