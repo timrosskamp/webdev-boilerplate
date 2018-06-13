@@ -24,5 +24,8 @@ export default {
             ]
         }),
         babel()
-    ]
+    ],
+    watch: {
+        clearScreen: false
+    }
 }
