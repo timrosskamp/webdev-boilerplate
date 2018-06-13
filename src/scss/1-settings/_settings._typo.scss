@@ -2,6 +2,7 @@
 @import 'modularscale-sass/stylesheets/modularscale';
 
 $fontsize: 16; // Define a px value here, but don't add a unit
+$lineheight: 26 / $fontsize;
 
 $modularscale: (
     base: $fontsize * 1em / 16,
