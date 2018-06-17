@@ -9,6 +9,7 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
+const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 gulp.task('build', done => {
@@ -32,6 +33,7 @@ gulp.task('build', done => {
             mqpacker({
                 sort: true
 			}),
+			autoprefixer(),
 			cssnano({
 				discardComments: {
 					removeAll: true
