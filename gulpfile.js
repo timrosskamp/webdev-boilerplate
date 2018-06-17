@@ -9,6 +9,7 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
+const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
@@ -33,6 +34,17 @@ gulp.task('build', done => {
             mqpacker({
                 sort: true
 			}),
+			pxtorem({
+                rootValue: 16,
+                unitPrecision: 2,
+                propList: [
+                    'font',
+                    'font-size',
+                    'letter-spacing'
+                ],
+                replace: true,
+                mediaQuery: true
+            }),
 			autoprefixer(),
 			cssnano({
 				discardComments: {
