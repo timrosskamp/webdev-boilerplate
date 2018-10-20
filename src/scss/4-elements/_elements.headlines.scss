@@ -1,28 +1,20 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family: $font-headline;
     font-weight: 600;
 }
 
 h1 {
-    @include ms-respond('font-size', 6);
+    @include interpolate('font-size', typo(4, 1.25), typo(4, 1.333));
 }
 
 h2 {
-    @include ms-respond('font-size', 5);
+    @include interpolate('font-size', typo(3, 1.25), typo(3, 1.333));
 }
 
 h3 {
-    @include ms-respond('font-size', 4);
+    @include interpolate('font-size', typo(2, 1.25), typo(2, 1.333));
 }
 
 h4 {
-    @include ms-respond('font-size', 3);
-}
-
-h5 {
-    @include ms-respond('font-size', 2);
-}
-
-h6 {
-    @include ms-respond('font-size', 1);
+    @include interpolate('font-size', typo(1, 1.25), typo(1, 1.333));
 }
