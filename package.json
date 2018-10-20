@@ -5,7 +5,9 @@
     "dev": "run-p dev:css dev:js",
     "dev:css": "gulp watch",
     "dev:js": "rollup -c -w",
-    "build": "rollup -c && gulp build"
+    "build": "run-p build:css build:js",
+    "build:css": "gulp build",
+    "build:js": "rollup -c"
   },
   "author": "Tim Rosskamp",
   "license": "UNLICENSED",
