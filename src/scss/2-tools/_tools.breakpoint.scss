@@ -3,30 +3,30 @@
  * @param {string} $point - The name of the breakpoint
  * @param {string} $mode - The breakpint mode (min|max)
  */
-@mixin breakpoint($point, $mode: 'min'){
-    @if( $mode == 'min' ){
-        @if( map-has-key($breakpoints, $point) ){
-            $value: map-get($breakpoints, $point);
-            @media (min-width: #{$value * ($fontsize / 16) * 1em)}){
-                @content;
-            }
-        }
-        @else {
-            @error "'#{$point}' is not a key of $breakpoint";
-        }
-    }
-    @else if( $mode: 'max' ){
-        @if( map-has-key($breakpoints, $point) ){
-            $value: map-get($breakpoints, $point);
-            @media (max-width: #{(($value - 1) * ($fontsize / 16) * 1em)}){
-                @content;
-            }
-        }
-        @else {
-            @error "'#{$point}' is not a key of $breakpoint";
-        }
-    }
-    @else {
-        @error "Unknown mode: '#{$mode}'. It must be 'min' or 'max'";
-    }
-}
+ @mixin breakpoint($point, $mode: 'min'){
+     @if( $mode == 'min' ){
+         @if( map-has-key($breakpoints, $point) ){
+             $value: map-get($breakpoints, $point);
+             @media (min-width: #{$value}){
+                 @content;
+             }
+         }
+         @else {
+             @error "'#{$point}' is not a key of $breakpoint";
+         }
+     }
+     @else if( $mode: 'max' ){
+         @if( map-has-key($breakpoints, $point) ){
+             $value: map-get($breakpoints, $point);
+             @media (max-width: #{$value - 1}){
+                 @content;
+             }
+         }
+         @else {
+             @error "'#{$point}' is not a key of $breakpoint";
+         }
+     }
+     @else {
+         @error "Unknown mode: '#{$mode}'. It must be 'min' or 'max'";
+     }
+ }
