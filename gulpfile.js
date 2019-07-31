@@ -1,18 +1,18 @@
-const { task, watch, src, dest, series } = require('gulp');
+const gulp = require('gulp');
 const pump = require('pump');
 const concat = require('gulp-concat');
-const sass = require('gulp-sass');
+const gulpSass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
 const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-task('sass', function(done){
+function sass(done){
 	pump([
-		src(['src/scss/main.scss']),
+		gulp.src(['src/scss/main.scss']),
 		concat('style.site.css'),
-		sass(),
+		gulpSass(),
 		postcss([
             mqpacker({
                 sort: true
@@ -36,10 +36,13 @@ task('sass', function(done){
 				}
 			})
         ]),
-		dest('dist/')
+		gulp.dest('dist/')
 	], done);
-});
+}
 
-task('watch', series('sass', () => {
-	watch(['src/scss/**'], ['sass']);
-}));
+function watch(){
+	gulp.watch(['src/scss/**'], sass);
+}
+
+exports.sass = sass;
+exports.watch = gulp.series(sass, watch);
