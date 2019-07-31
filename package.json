@@ -2,8 +2,8 @@
     "name": "webdev-boilerplate",
     "version": "1.0.0",
     "scripts": {
-        "dev": "concurrently \"gulp watch\" \"rollup -c -w\"",
-        "build": "gulp build && rollup -c"
+        "dev": "concurrently \"gulp watch\" \"webpack -w\"",
+        "build": "gulp build && webpack"
     },
     "license": "UNLICENSED",
     "private": true,
