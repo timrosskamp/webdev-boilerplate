@@ -1,3 +1,0 @@
-@function typo($v, $ratio, $base: $fontsize){
-    @return pow($ratio, $v) * $base * 1px;
-}

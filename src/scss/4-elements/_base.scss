@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    font-size: $fontsize * 1em / 16;
-    font-family: $font-paragraph;
+    @include text-size(0);
     font-weight: 400;
-    line-height: $lineheight;
+    color: color('neutral', 9);
+    background-color: color('neutral', 0);
 }
 
 em, i {

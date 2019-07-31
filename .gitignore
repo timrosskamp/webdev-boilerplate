@@ -1,7 +1,2 @@
-node_modules
-assets/
-.DS_Store
-*.log*
-Thumbs.db
-[Dd]esktop.ini
-$RECYCLE.BIN/
+node_modules/
+dist/
