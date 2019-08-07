@@ -1,10 +1,18 @@
 @import "1-settings/vars";
 
-@import "2-tools/plugins";
+@import "2-tools/sass-ui";
 
 @import "3-generic/normalize";
 @import "3-generic/reset";
 
 @import "4-elements/base";
 
+@import "5-objects/container";
+@import "5-objects/gutter";
+@import "5-objects/flow";
+
+@import "6-components/btn";
+@import "6-components/icon";
+
+@import "7-utils/text";
 @import "7-utils/visuallyhidden";

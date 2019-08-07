@@ -4,6 +4,7 @@ html {
 
 body {
     @include text-size(0);
+    font-family: $--font-family--paragraph;
     font-weight: 400;
     color: color('neutral', 9);
     background-color: color('neutral', 0);
