@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pump = require('pump');
 const concat = require('gulp-concat');
 const gulpSass = require('gulp-sass');
+const sassInlineSVG = require('sass-inline-svg');
 const postcss = require('gulp-postcss');
 const mqpacker = require('css-mqpacker');
 const pxtorem = require('postcss-pxtorem');
@@ -12,7 +13,11 @@ function sass(done){
 	pump([
 		gulp.src(['src/scss/main.scss']),
 		concat('style.site.css'),
-		gulpSass(),
+		gulpSass({
+			functions: {
+				svg: sassInlineSVG('./src/svg/', [])
+			}
+		}),
 		postcss([
             mqpacker({
                 sort: true
@@ -30,11 +35,7 @@ function sass(done){
                 mediaQuery: true
             }),
 			autoprefixer(),
-			cssnano({
-				discardComments: {
-					removeAll: true
-				}
-			})
+			cssnano()
         ]),
 		gulp.dest('dist/')
 	], done);
@@ -44,5 +45,5 @@ function watch(){
 	gulp.watch(['src/scss/**'], sass);
 }
 
-exports.sass = sass;
+exports.build = sass;
 exports.watch = gulp.series(sass, watch);
