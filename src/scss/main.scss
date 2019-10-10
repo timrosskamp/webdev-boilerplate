@@ -1,6 +1,13 @@
 @import "1-settings/vars";
 
-@import "2-tools/sass-ui";
+@import "2-tools/common";
+@import "2-tools/color";
+@import "2-tools/breakpoint";
+@import "2-tools/inline-svg";
+@import "2-tools/interpolation";
+@import "2-tools/spacing";
+@import "2-tools/text";
+@import "2-tools/z-depth";
 
 @import "3-generic/normalize";
 @import "3-generic/reset";

@@ -1,16 +1,11 @@
 {
-    "name": "webdev-boilerplate",
-    "version": "1.0.0",
     "scripts": {
         "dev": "concurrently \"gulp watch\" \"webpack -w\"",
         "build": "gulp build && webpack"
     },
-    "license": "UNLICENSED",
-    "private": true,
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/preset-env": "^7.5.5",
-        "@timrosskamp/sass-ui": "github:timrosskamp/sass-ui",
         "autoprefixer": "^9.6.1",
         "babel-loader": "^8.0.6",
         "concurrently": "^4.1.1",
